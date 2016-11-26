@@ -20,9 +20,7 @@ Images    = BingXML.find_all('image')
 ImageURL  = "https://www.bing.com" + Images[0].url.text
 ImageName = Images[0].startdate.text+".jpg"
 
-# All the images will be saved in '/home/[user]/Pictures/BingWallpapers/'
-# username = getpass.getuser()
-# path = '/home/' + username + '/Pictures/BingWallpapers/'
+# All the images will be saved in '/home/[user]/[Pictures accordind user language]/BingWallpapers/'
 import glib
 ruta = glib.get_user_special_dir(glib.USER_DIRECTORY_PICTURES)
 path = ruta + '/BingWallpapers/'
