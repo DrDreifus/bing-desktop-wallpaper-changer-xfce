@@ -17,7 +17,7 @@ BingXML     = BeautifulSoup(page, "lxml")
 
 # For extracting complete URL of the image
 Images    = BingXML.find_all('image')
-ImageURL  = "https://www.bing.com" + Images[0].url.text
+ImageURL  = "https://www.bing.com" + Images[0].urlbase.text + '_1920x1080.jpg'
 ImageName = Images[0].startdate.text+".jpg"
 
 # All the images will be saved in '/home/[user]/[Pictures accordind user language]/BingWallpapers/'
